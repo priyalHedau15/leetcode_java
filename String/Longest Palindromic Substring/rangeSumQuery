@@ -1,0 +1,28 @@
+/* Made a vector vec in public , then assigned nums to vec , then ran a loop from i to j to calculate sum */
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class NumArray {
+public:
+    vector<int> vec;
+    NumArray(vector<int>& nums) {
+        vec = nums;
+    }
+    
+    int sumRange(int i, int j) {
+        int sum =0;
+        while(i<=j){
+            sum += vec[i];
+            i++;
+        }
+        return sum;
+    }
+};
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * NumArray* obj = new NumArray(nums);
+ * int param_1 = obj->sumRange(i,j);
+ */
